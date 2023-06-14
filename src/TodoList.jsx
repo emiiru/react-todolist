@@ -7,9 +7,9 @@ export function TodoList({ todos, toggleTodo, deleteTodo }) {
   });
 
   return (
-    <ul className="list">
+    <ul className="list-group">
       {sortedTodos.length === 0 ? (
-        <li>No Todos</li>
+        <li className='list-group-item'>No Todos</li>
       ) : (
         sortedTodos.map((todo) => (
           <TodoItem {...todo} key={todo.id} toggleTodo={toggleTodo} deleteTodo={deleteTodo} />

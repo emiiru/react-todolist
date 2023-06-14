@@ -18,18 +18,10 @@ export function NewTodoForm({ onSubmit }) {
 
   return (
     <form onSubmit={handleSubmit} className="new-item-form">
-      <div className="form-row">
-        <label htmlFor="item">New Item</label>
-        <input
-          type="text"
-          id="item"
-          value={newItem}
-          onChange={handleChange}
-        />
+      <div class="input-group mb-3">
+  		<input className="form-control" placeholder='Input New item' type="text" id="item" value={newItem} onChange={handleChange} />
+          <button type="submit" className="btn btn-primary">Add</button>
       </div>
-      <button type="submit" className="btn">
-        Add
-      </button>
     </form>
   );
 }
