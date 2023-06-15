@@ -2,7 +2,8 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App'
 import AboutPage from './pages/AboutPage.jsx'
-import BlogPage from './pages/BlogPage.jsx'
+import Blogs from './pages/Blogs.jsx'
+import Blog from './pages/Blog.jsx'
 import {
   createBrowserRouter,
   RouterProvider,
@@ -11,15 +12,19 @@ import {
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <App/>,
+    element: <App />,
   },
   {
     path: "/about",
-    element: <AboutPage/>,
+    element: <AboutPage />,
   },
   {
     path: "/blogs",
-    element: <BlogPage/>,
+    element: <Blogs />,
+  },
+  {
+    path: "/blogs/:id",
+    element: <Blog />,
   },
 ]);
 
