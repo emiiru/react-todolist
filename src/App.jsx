@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { NewTodoForm } from './NewTodoForm.jsx';
-import { TodoList } from './TodoList.jsx';
+import { TodoList } from './TodoList';
+import NavBar from './components/NavBar'
 
 export default function App() {
   const [todos, setTodos] = useState(() => {
@@ -34,7 +35,8 @@ export default function App() {
   };
 
   return (
-    <div className='container mt-5'>
+    <div className='container'>
+      <NavBar className="mb-5" />
       <NewTodoForm onSubmit={addTodo} />
       <h1 className="header">Todo List</h1>
       <TodoList todos={todos} toggleTodo={toggleTodo} deleteTodo={deleteTodo} />
