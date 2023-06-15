@@ -24,26 +24,28 @@ export default function Blog() {
   }, [])
   return (
     <>
-      {loading ? <Loader /> : ''}
-      <div className="container">
-        <div>
-          <NavBar className="mb-5" />
-          <div className="row mt-5">
-            <div className="col-md-12">
-              <h3 className='text-center'>{post.title}</h3>
-              <div>
-                <p>{post.body}</p>
-                <hr />
-              </div>
-              <div className="row">
-                <div className="col-md-12">
-                  <Link to={'/blogs/'} className='nav-link pull-right' aria-current='page'><h3>Back</h3></Link>
+      {loading ? <Loader /> :
+        <div className="container">
+          <div>
+            <NavBar className="mb-5" />
+            <div className="row mt-5">
+              <div className="col-md-12">
+                <h3 className='text-center'>{post.title}</h3>
+                <div>
+                  <p>{post.body}</p>
+                  <hr />
+                </div>
+                <div className="row">
+                  <div className="col-md-12">
+                    <Link to={'/blogs/'} className='nav-link pull-right' aria-current='page'><h3>Back</h3></Link>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
+      }
+
     </>
   )
 }

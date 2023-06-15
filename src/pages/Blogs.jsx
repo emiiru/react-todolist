@@ -22,8 +22,8 @@ export default function Blogs() {
   }, [])
   return (
     <>
+      {loading ? <Loader /> : ''}
       <div className="container">
-        {loading ? <Loader /> : ''}
         <NavBar className="mb-5" />
         <div className="row mt-3">
           <div className="col-md-12">
